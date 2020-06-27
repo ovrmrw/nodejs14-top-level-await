@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-nodejs14-top-level-await
+spec:
+  completions: 1
+  parallelism: 1
+  ttlSecondsAfterFinished: 30
+  template:
+    spec:
+      containers:
+      - name: nodejs14-top-level-await
+        image: docker.io/ovrmrw/nodejs14-top-level-await
+      restartPolicy: Never
