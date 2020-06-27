@@ -1,0 +1,22 @@
+{
+  "name": "nodejs14-top-level-await",
+  "version": "0.1.0",
+  "description": "",
+  "main": ".dest/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony-top-level-await .dest/index.js",
+    "build": "tsc -p .",
+    "docker-build": "docker build -t nodejs14-top-level-await .",
+    "docker-run": "docker run -it --rm --name running-nodejs14-top-level-await nodejs14-top-level-await",
+    "docker": "npm run docker-build && npm run docker-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "typescript": "^3.9.5"
+  }
+}
