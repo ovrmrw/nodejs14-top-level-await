@@ -1,4 +1,4 @@
-FROM node:14.4-alpine3.12
+FROM node:14.4.0-alpine3.12
 WORKDIR /nodejs-build
 COPY package*.json ./
 COPY tsconfig*.json ./
@@ -6,7 +6,7 @@ COPY src/ ./src/
 RUN npm install && npm run build
 
 
-FROM node:14.4-alpine3.12
+FROM node:14.4.0-alpine3.12
 WORKDIR /nodejs
 COPY package*.json ./
 COPY src/ ./src/
