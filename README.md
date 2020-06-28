@@ -20,8 +20,7 @@ $ minikube start --feature-gates='TTLAfterFinished=true'
 
 ```
 $ kubectl apply -f k8s-job.yaml
-$ kubectl get pods
-$ kubectl logs {job_completed_pod_name}
+$ kubectl logs -f $(kubectl get pods --selector=job-name=job-nodejs14-top-level-await --output=jsonpath='{.items[0].metadata.name}')
 ```
 
 The Job pods will be automatically removed thanks to TTLAfterFinished feature.
