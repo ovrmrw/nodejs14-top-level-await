@@ -7,7 +7,7 @@ spec:
   parallelism: 1
   ttlSecondsAfterFinished: 30
   backoffLimit: 10
-  activeDeadlineSeconds: 60
+  activeDeadlineSeconds: 600
   template:
     spec:
       containers:
